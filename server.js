@@ -1,3 +1,7 @@
+const port = process.env.PORT || 8000;
+const conString = process.env.DATABASE_URL || 'postgres://postgres:$Asuka8955meh@localhost:5432/shakespearu';
+const ssl = (process.env.PORT) ? { rejectUnauthorized: false } : false;
+
 const express = require('express');
 const path = require('path');
 const ejs = require('ejs');
@@ -10,11 +14,8 @@ const router = express.Router();
 const app = express();
 
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'shakespearu',
-    password: '$Asuka8955meh',
-    port: 5432
+    connectionString: conString,
+    ssl: ssl
 });
 
 function renderPlay(book_src) {
@@ -324,7 +325,6 @@ app.post('/ajax/dictionary-book', (req, res) => {
         });
     }).catch((error) => {
         console.log(error);
-        next();
     });
 });
 
@@ -333,6 +333,6 @@ app.use((req, res) => {
 });
 
 app.use('/', router);
-app.listen(8000);
+app.listen(port);
 
-console.log('Running at port 8000!');
+console.log('Running at port ' + port + '!');
