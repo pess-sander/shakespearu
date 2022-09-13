@@ -1,0 +1,151 @@
+<%- include('partials/header.ejs') %>
+
+<div class="dicart-wrapper">
+
+<header class="dicart-header">
+    <p class="dicart-idiom <% if (dicart_type == 'pun') { %>less<% } %>"><%= dicart_idiom %></p>
+    <p class="dicart-scene"><% if (dicart_type != 'word') { %><%= dicart_scene %><% } else { %>[<%= dicart_ipa %>] <i class="fa-solid fa-headphones dicart-ipa-button" id="dicart-ipa-button"></i><% } %></p>
+</header>
+<p class="dicart-translation <% if (dicart_type == 'pun') { %>bigger<% } %>"><%= dicart_translation %></p>
+
+<% if (dicart_type == 'word' || dicart_type == 'idiom') { %>
+<div class="idiom-chart-wrapper">
+    <canvas id="idiom-chart"></canvas>
+</div>
+
+<div class="idiom-quote-wrapper">
+    <div class="idiom-quote-content" id="idiom-quote-content">
+        <p class="idiom-quote" id="idiom-quote"></p>
+        <p class="idiom-quote-author" id="idiom-quote-author"></p>
+        <p class="idiom-quote-title" id="idiom-quote-title"></p>
+    </div>
+
+    <img class="idiom-quote-anim" id="idiom-quote-anim" src="/imgs/loading.svg" alt="loading">
+</div>
+<% } else { %>
+<div class="idiom-desc-wrapper">
+    <p class="idiom-desc"><%= dicart_description %></p>
+</div>
+<% } %>
+
+</div>
+
+<% if (dicart_type == 'word') { %>
+<audio controls hidden id="pronunciation">
+    <source src="/audio/<%= dicart_link %>.ogg" type="audio/ogg">
+    <source src="/audio/<%= dicart_link %>.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<% } %>
+
+<% if (dicart_type == 'word' || dicart_type == 'idiom') { %>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    let labels = [];
+    let null_data = [];
+    for (let i = 0; i < 220; i++) {
+        labels[i] = (1800 + i) + '';
+        null_data[i] = 0;
+    }
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: '<%= dicart_idiom %>',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: null_data,
+        }]
+    };
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: tooltipItem => {
+                            return tooltipItem.yLabel;
+                        }
+                    }
+                }
+            },
+            elements: {
+                point: {
+                    pointRadius: 0
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Годы'
+                    }
+                },
+                y: {
+                    ticks: {
+                        callback: (value, index, ticks) => {
+                            return value + '%';
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: '% содержания выражения в корпусе текстов'
+                    }
+                }
+            }
+        }
+    };
+
+    function dictionaryBookAjax(idiom_req) {
+        $.ajax({
+            url: '/ajax/dictionary-book',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                idiom_req: idiom_req
+            }),
+            success: data => {
+                document.getElementById('idiom-quote').innerHTML = data.text_snippet;
+                document.getElementById('idiom-quote-title').innerText = data.book_title;
+                document.getElementById('idiom-quote-author').innerText = data.book_author;
+                $('#idiom-quote-anim').hide();
+                $('#idiom-quote-content').fadeIn();
+            }
+        });
+    }
+
+    function dictionaryChartAjax(idiom, chart) {
+        $.ajax({
+            url: '/ajax/dictionary-chart',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                idiom: idiom
+            }),
+            success: data => {
+                chart.data.datasets[0].data = data.chart_data;
+                chart.update();
+            }
+        });
+    }
+
+    $(document).ready(() => {
+        const chart = new Chart(document.getElementById('idiom-chart'), config);
+
+        // DICTIONARY ARTICLE AJAX
+        let idiom_req = '<%= dicart_link %>';
+        let idiom = '<%= dicart_idiom %>';
+        if ('<%= dicart_type %>' == 'word' || '<%= dicart_type %>' == 'idiom') {
+            dictionaryBookAjax(idiom_req);
+            dictionaryChartAjax(idiom, chart);
+        }
+    });
+</script>
+<% } %>
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,283 @@
+.dicart-idiom.less {
+    font-size: 2.6em;
+}
+
+.dicart-translation {
+    font-family: 'EB Garamond', serif;
+    text-align: center;
+    font-size: 1.7em;
+    margin-top: 40px;
+}
+
+.dicart-translation.bigger {
+    font-size: 2.2em;
+}
+
+.dicart-ipa-button {
+    cursor: pointer;
+    color: #333;
+}
+
+.dicart-ipa-button:hover {
+    color: black;
+}
+
+.idiom-chart-wrapper {
+    width: 80%;
+    margin: 20px auto 0 auto;
+}
+
+.idiom-quote-wrapper,
+.idiom-desc-wrapper {
+    width: 60%;
+    margin: 20px auto 0 auto;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.idiom-desc-wrapper {
+    margin-top: 80px;
+    padding-bottom: 40px;
+}
+
+.idiom-quote-content {
+    display: none;
+}
+
+.idiom-quote-anim {
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: -10px;
+}
+
+.idiom-quote,
+.idiom-desc {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    position: relative;
+}
+
+.idiom-desc {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.7em;
+}
+
+.idiom-quote::before,
+.idiom-quote::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 25px;
+    background-image: url('/imgs/quote.png');
+    background-size: contain;
+}
+
+.idiom-quote::before {
+    left: -34px;
+    top: -16px;
+}
+
+.idiom-quote::after {
+    transform: scaleY(-1) scaleX(-1);
+    right: -34px;
+    bottom: -16px;
+}
+
+.idiom-quote-author {
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.idiom-quote-title {
+    text-align: right;
+    margin-top: 5px;
+    margin-right: 50px;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.dicart-wrapper {
+    padding-bottom: 50px;
+}
+
+.dictionary-controls {
+    background-color: antiquewhite;
+    border-top: 2px dashed black;
+    margin-top: 20px;
+
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.dcontr-essentials {
+    position: relative;
+    height: 60px;
+    padding: 5px 20px;
+    border-bottom: 2px solid burlywood;
+}
+
+.dcontr-sort-wrapper {
+    position: absolute;
+    left: 30px;
+    top: 22px;
+    font-size: 1.1em;
+    color: black;
+}
+
+.dcontr-sort {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#dcontr-sort-abc {
+    display: none;
+}
+
+.dcontr-search {
+    position: absolute;
+    top: 15px;
+    right: 80px;
+    height: 28px;
+    width: 250px;
+    padding: 1px 6px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.dcontr-toggle-optionals {
+    position: absolute;
+    top: 18px;
+    right: 30px;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.dcontr-toggle-optionals .fa-arrow-up {
+    display: none;
+}
+
+.dcontr-optionals {
+    background-color: floralwhite;
+    border-bottom: 2px solid wheat;
+    display: block;
+    padding: 10px 0;
+    display: none;
+}
+
+.dcontr-optionals-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.dcontr-checkbox-wrapper p {
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+.dcontr-checkbox-wrapper p:first-of-type {
+    margin-top: 0;
+    font-size: 1.1em;
+    text-align: center
+}
+
+.dcontr-checkbox-wrapper .dcontr-label {
+    margin-left: 3px;
+    position: relative;
+    top: -1px;
+}
+
+.dcontr-submit {
+    width: 150px;
+    height: 40px;
+    background-color: coral;
+    margin: 10px auto 0 auto;
+    text-align: center;
+    padding-top: 8px;
+    cursor: pointer;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.2em;
+    transition: border-radius .25s ease-out;
+}
+
+.dcontr-submit:hover {
+    border-radius: 10px;
+    text-decoration: underline;
+}
+
+.dcontr-submit:active {
+    background-color: rgb(234, 88, 35);
+}
+
+.dic-item {
+    margin: 30px 0;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.dic-item:last-of-type {
+    margin-bottom: 0;
+}
+
+.dic-item:hover {
+    background-color: floralwhite;
+}
+
+.ditem-title {
+    font-family: 'Libre Baskerville', serif;
+    color: rgb(186, 46, 0);
+    font-size: 2em;
+}
+
+.ditem-title-marked {
+    background-color: rgb(238, 184, 184);
+}
+
+.dic-item:hover .ditem-title {
+    text-decoration: underline;
+}
+
+.ditem-source {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ditem-type {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.ditem-type-idiom,
+.ditem-type-word,
+.ditem-type-pun {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid black;
+}
+
+.ditem-type-idiom { 
+    background-color: purple;
+}
+
+.ditem-type-word { 
+    background-color: yellow;
+}
+
+.ditem-type-pun { 
+    background-color: forestgreen;
+}

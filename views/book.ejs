@@ -1,0 +1,54 @@
+<%- include('partials/header.ejs') %>
+
+<div class="book">
+    <header class="book-header">
+        <p class="book-title"><%= book_title %></p>
+        <p class="book-subtitle"><%= book_subtitle %></p>
+    </header>
+    <div class="book-controls">
+        <% if (is_act && current_act > 1) { %>
+        <a class="book-act-link" href="/books/<%= book_id %>?view=act<%= current_act-1 %>"><p class="book-prev-act">&lt;</p></a>
+        <% } else { %><div class="controls-filler"></div><% } %>
+        <p class="book-controls-center">
+            <a class="book-controls-link" href="/books/<%= book_id %>?view=contents">Содержание</a>
+            <a class="book-controls-link" href="/books/<%= book_id %>?view=fulltext">Полный текст</a>
+        </p>
+        <% if (is_act && current_act < acts_count) { %>
+        <a class="book-act-link" href="/books/<%= book_id %>?view=act<%= current_act+1 %>"><p class="book-next-act">&gt;</p></a>
+        <% } else { %><div class="controls-filler"></div><% } %>
+    </div>
+    <div class="book-text">
+        <% if (is_contents) { %>
+        <p class="contents-title">Содержание</p>
+        <div class="contents-img-wrapper">
+            <img class="contents-img" src="/imgs/<%= book_id %>.jpg" alt="<%= book_id %>">
+        </div>
+        <div class="contents-list">
+            <!-- <a class="contents-item" href="#">ACT I</a>
+            <a class="contents-item" href="#">ACT II</a>
+            <a class="contents-item" href="#">ACT III</a>
+            <a class="contents-item" href="#">ACT IV</a>
+            <a class="contents-item" href="#">ACT V</a> -->
+            <%- book_content %>
+        </div>
+        <% } else { %>
+            <%- book_content %>
+        <% } %>
+    </div>
+    <% if (!is_contents) { %>
+    <div class="book-controls">
+        <% if (is_act && current_act > 1) { %>
+        <a class="book-act-link" href="/books/<%= book_id %>?view=act<%= current_act-1 %>"><p class="book-prev-act">&lt;</p></a>
+        <% } else { %><div class="controls-filler"></div><% } %>
+        <p class="book-controls-center">
+            <a class="book-controls-link" href="/books/<%= book_id %>?view=contents">Содержание</a>
+            <a class="book-controls-link" href="/books/<%= book_id %>?view=fulltext">Полный текст</a>
+        </p>
+        <% if (is_act && current_act < acts_count) { %>
+        <a class="book-act-link" href="/books/<%= book_id %>?view=act<%= current_act+1 %>"><p class="book-next-act">&gt;</p></a>
+        <% } else { %><div class="controls-filler"></div><% } %>
+    </div>
+    <% } %>
+</div>
+
+<%- include('partials/footer.ejs') %>

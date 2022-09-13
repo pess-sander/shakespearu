@@ -1,0 +1,248 @@
+.book-header,
+.dicart-header {
+    background-color: mistyrose;
+    border-bottom: burlywood 2px solid;
+}
+
+.book-title,
+.dicart-idiom {
+    text-align: center;
+    padding: 45px 0 15px 0;
+    font-size: 4em;
+    font-family: 'Libre Baskerville', serif;
+    color: rgb(15, 14, 14);
+}
+
+.book-subtitle,
+.dicart-scene {
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 1.3em;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.book-controls {
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    /* background-color: rgb(248, 244, 240); */
+    border-bottom:rgb(69, 32, 32) 2px dashed;
+}
+
+.book-controls:last-of-type {
+    /* border-top: burlywood 2px solid; */
+    border-top:rgb(69, 32, 32) 2px dashed;
+    border-bottom: none;
+}
+
+.book-controls a {
+    color:rgb(15, 14, 14);
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+.book-controls-center {
+    margin-top: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.controls-filler {
+    width: 8%;
+}
+
+.book-controls-link:hover {
+    text-decoration: underline;
+}
+
+.book-act-link {
+    display: inline-block;
+    width: 8%;
+    height: 100%;
+    text-align: center;
+    padding-top: 21px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.book-act-link:hover > .book-prev-act {
+    font-size: 1.3em;
+    position: relative;
+    left: -10px;
+    top: -2.5px;
+}
+
+.book-act-link:hover > .book-next-act {
+    font-size: 1.3em;
+    position: relative;
+    right: -10px;
+    top: -2.5px;
+}
+
+.book-text {
+    padding-bottom: 50px;
+}
+
+.book-act:first-child {
+    margin-top: 0;
+    border: none;
+}
+
+.book-act {
+    font-size: 2.1em;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 30px;
+    margin-top: 60px;
+    border-top:rgb(15, 14, 14) 2px dotted;
+    font-family: 'Lora', serif;
+}
+
+.book-scene {
+    font-size: 1.3em;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-style: italic;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+
+.book-act + .book-scene {
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.book-description {
+    font-size: 1.1em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 50%;
+    margin: 0 auto;
+    /* padding-bottom: 25px; */
+}
+
+.book-character {
+    font-size: 1.2em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding: 30px 0 5px 0;
+}
+
+.book-replica {
+    font-size: 1.1em;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding-left: 10px;
+    width: 38%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contents-title {
+    text-align: center;
+    font-size: 3em;
+    font-family: 'EB Garamond', serif;
+    margin-top: 15px;
+}
+
+.contents-img-wrapper {
+    width: 100%;
+    /* border-top:rgb(69, 32, 32) dashed 2px;
+    border-bottom:rgb(69, 32, 32) dashed 2px; */
+    margin-top: 25px;
+    margin-bottom: -20px;
+    background-color:antiquewhite;
+    padding: 30px 0;
+}
+
+.contents-img {
+    height: 500px;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: block;
+}
+
+.contents-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.contents-item {
+    text-align: center;
+    margin: 45px auto 0 auto;
+    color:rgb(15, 14, 14);
+    font-family: 'Lora', serif;
+    /* text-decoration: none; */
+    font-size: 1.4em;
+    position: relative;
+    display: block;
+    width: 10%;
+}
+
+.contents-item:hover {
+    text-decoration: underline;
+}
+
+/* .contents-item::after {
+    content: '';
+    display: block;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: -45px;
+    height: 45px;
+    /* background-color: green; 
+    border-right: 2px rgb(15, 14, 14) dashed;
+} */
+
+.books-wrapper,
+.dictionary-wrapper {
+    padding: 30px 0 50px 0;
+}
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-list-title,
+.dictionary-list-title {
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    font-size: 3em;
+}
+
+.book-list-item {
+    margin-top: 30px;
+    background-color: antiquewhite;
+    padding: 25px 0 15px 0;
+    text-decoration: none;
+}
+
+.book-list-img {
+    display: block;
+    height: 500px;
+    width: 900px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.book-list-text {
+    text-align: center;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    padding: 10px 0 5px 0;
+}
+
+.book-list-item:hover .book-list-text {
+    text-decoration: underline;
+}

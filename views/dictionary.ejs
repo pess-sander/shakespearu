@@ -1,0 +1,66 @@
+<%- include('partials/header.ejs') %>
+
+<div class="dictionary-wrapper">
+    <p class="dictionary-list-title">Словарь</p>
+
+    <div class="dictionary-controls">
+        <div class="dcontr-essentials">
+            <div class="dcontr-sort-wrapper">
+                <label class="dcontr-label" for="dcontr-sort">Отсортировать: </label>
+                <p class="dcontr-sort" id="dcontr-sort">
+                    <span id="dcontr-sort-abc">в алфавитном порядке</span><span id="dcontr-sort-rev">в обратном порядке</span>
+                </p>
+            </div>
+
+            <input type="text" class="dcontr-search" id="dcontr-search" placeholder="Поиск...">
+
+            <p class="dcontr-toggle-optionals" id="dcontr-toggle-optionals"><i class="fa-solid fa-arrow-up"></i><i class="fa-solid fa-arrow-down"></i></p>
+        </div>
+
+        <div class="dcontr-optionals" id="dcontr-optionals">
+            <div class="dcontr-optionals-wrapper">
+                <div class="dcontr-checkbox-wrapper">
+                    <p class="dcontr-checkbox-label">Источник:</p>
+                    <p>
+                        <input type="checkbox" class="source-checkbox" id="source1" name="source1" value="Hamlet"><label class="dcontr-label" for="source1">Hamlet</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" class="source-checkbox" id="source2" name="source2" value="Macbeth"><label class="dcontr-label" for="source2">Macbeth</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" class="source-checkbox" id="source3" name="source3" value="Romeo"><label class="dcontr-label" for="source3">Romeo and Juliet</label>
+                    </p>
+                </div>
+
+                <div class="dcontr-checkbox-wrapper">
+                    <p class="dcontr-checkbox-label">Тип:</p>
+                    <p>
+                        <input type="checkbox" class="type-checkbox" id="type1" value="word"><label class="dcontr-label" for="type1">Неологизмы</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" class="type-checkbox" id="type2" value="idiom"><label class="dcontr-label" for="type2">Идиомы</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" class="type-checkbox" id="type3" value="pun"><label class="dcontr-label" for="type3">Каламбуры</label>
+                    </p>
+                </div>
+            </div>
+
+            <p class="dcontr-submit" id="dcontr-submit">Применить</p>
+        </div>
+    </div>
+
+    <div id="dic-items-wrapper">
+        <% for (let i = 0; i < ditems_count; i++) { %>
+        <a class="dic-item" href="/dictionary/<%= links[i] %>">
+            <p class="ditem-title"><%= titles[i] %></p>
+            <% if (types[i] != 'word') { %>
+                <p class="ditem-source"><%= sources[i] %></p>
+            <% } %>
+            <p class="ditem-type"><span class="ditem-type-<%= types[i] %>"></span> <% if (types[i] == 'idiom') { %>Идиома<% } else if (types[i] == 'word') { %>Неологизм<% } else if (types[i] == 'pun') { %>Каламбур<% } %></p>
+        </a>
+        <% } %>
+    </div>
+</div>
+
+<%- include('partials/footer.ejs') %>

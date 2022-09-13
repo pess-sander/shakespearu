@@ -1,0 +1,61 @@
+.header {
+    /* height: 100px; */
+    width: 100%;
+    border-bottom: rgb(254, 53, 53) 5px solid;
+    background-color: rgb(254, 252, 252);
+}
+
+.header .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo-link {
+    color: black;
+    text-decoration: none;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 4.2em;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-link {
+    height: 60px;
+    width: 50%;
+    text-align: center;
+    padding-top: 10px;
+    color: black;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 2em;
+    border-right: 2px dashed black;
+    border-top: 1px solid black;
+}
+
+.nav-link:hover {
+    /* text-decoration: underline; */
+    background-color: floralwhite;
+}
+
+.nav-link:first-of-type {
+    border-left: 2px dashed black;
+}
+
+.move-up {
+    width: 120px;
+    height: 290px;
+    background-image: url('/imgs/up.png');
+    background-size: contain;
+    position: fixed;
+    left: 20px;
+    bottom: 60px;
+    cursor: pointer;
+    display: none;
+}

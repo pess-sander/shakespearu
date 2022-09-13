@@ -1,0 +1,23 @@
+{
+  "name": "shakespear",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "nodemom server.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "google-ngram": "^1.0.16",
+    "node-fetch": "^3.2.10",
+    "node-html-parser": "^6.0.0",
+    "pg": "^8.8.0",
+    "request": "^2.88.2"
+  }
+}
