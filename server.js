@@ -10,6 +10,7 @@ const ngram = require('google-ngram');
 const axios = require('axios').default;
 const { Pool } = require('pg');
 const { Server } = require('http');
+const escape = require('pg-escape');
 const router = express.Router();
 const app = express();
 
@@ -74,7 +75,8 @@ async function renderPlay(book_src) {
     // let idioms = Array.from(book_content.matchAll(/i\{(.*)\}/g));
     let idioms = book_content.match(/i\{(.*)\}/g);
     for (let i = 0; i < idioms.length; i++) {
-        let data =  await pool.query('SELECT * FROM dict WHERE LOWER(title) = LOWER(\'' + idioms[i].slice(2, -1) + '\')');
+        let sql = escape('SELECT * FROM dict WHERE LOWER(title) = LOWER(\'%s\');', [idioms[i].slice(2, -1)]);
+        let data =  await pool.query(sql);
         //console.log(idioms[i][1]);
         let idiom_href = data.rows[0].link;
         book_content = book_content.replace(/i\{(.*)\}/, '<a href="/dictionary/' + idiom_href + '" class="book-idiom">$1</a>');
@@ -82,7 +84,8 @@ async function renderPlay(book_src) {
 
     let puns = book_content.match(/p\{(.*)\}/g);
     for (let i = 0; i < puns.length; i++) {
-        let data =  await pool.query('SELECT * FROM dict WHERE LOWER(title) = LOWER(\'' + puns[i].slice(2, -1) + '\')');
+        let sql = escape('SELECT * FROM dict WHERE LOWER(title) = LOWER(\'%s\');', [puns[i].slice(2, -1)]);
+        let data =  await pool.query(sql);
         let pun_href = data.rows[0].link;
         book_content = book_content.replace(/p\{(.*)\}/, '<a href="/dictionary/' + pun_href + '" class="book-pun">$1</a>');
     }
