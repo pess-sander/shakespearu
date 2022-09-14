@@ -139,7 +139,7 @@
 
         // DICTIONARY ARTICLE AJAX
         let idiom_req = '<%= dicart_link %>';
-        let idiom = '<%= dicart_idiom %>';
+        let idiom = idiom_req.split('-').join(' ');
         if ('<%= dicart_type %>' == 'word' || '<%= dicart_type %>' == 'idiom') {
             dictionaryBookAjax(idiom_req);
             dictionaryChartAjax(idiom, chart);

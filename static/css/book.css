@@ -143,6 +143,35 @@
     padding-left: 10px;
     width: 38%;
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.5em;
+}
+
+.book-word,
+.book-idiom,
+.book-pun {
+    color: white;
+    text-decoration: none;
+    padding: 2px 3px;
+    border-radius: 5px;
+}
+
+.book-word:hover,
+.book-idiom:hover,
+.book-pun:hover {
+    text-decoration: underline;
+}
+
+.book-word {
+    background-color: yellow;
+    color: black;
+}
+
+.book-idiom {
+    background-color: purple;
+}
+
+.book-pun {
+    background-color: forestgreen;
 }
 
 .contents-title {

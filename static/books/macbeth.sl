@@ -31,7 +31,7 @@ The Tragedy of Macbeth
 %SCENE II. A camp near Forres.
 ~Alarum within. Enter DUNCAN, MALCOLM, DONALBAIN, LENNOX, with Attendants, meeting a bleeding Sergeant
 *DUNCAN
->What bloody man is that? He can report,
+>What w{bloody} man is that? He can report,
 >As seemeth by his plight, of the revolt
 >The newest state.
 *MALCOLM
@@ -52,7 +52,7 @@ The Tragedy of Macbeth
 >Show'd like a rebel's whore: but all's too weak:
 >For brave Macbeth--well he deserves that name--
 >Disdaining fortune, with his brandish'd steel,
->Which smoked with bloody execution,
+>Which smoked with w{bloody} execution,
 >Like valour's minion carved out his passage
 >Till he faced the slave;
 >Which ne'er shook hands, nor bade farewell to him,
@@ -160,7 +160,7 @@ The Tragedy of Macbeth
 >Hang upon his pent-house lid;
 >He shall live a man forbid:
 >Weary se'nnights nine times nine
->Shall he dwindle, peak and pine:
+>Shall he w{dwindle}, peak and pine:
 >Though his bark cannot be lost,
 >Yet it shall be tempest-tost.
 >Look what I have.
@@ -340,7 +340,7 @@ The Tragedy of Macbeth
 >Like our strange garments, cleave not to their mould
 >But with the aid of use.
 *MACBETH
->[Aside] Come what come may,
+>[Aside] i{Come what come may},
 >Time and the hour runs through the roughest day.
 *BANQUO
 >Worthy Macbeth, we stay upon your leisure.
@@ -457,7 +457,7 @@ The Tragedy of Macbeth
 >to thy heart, and farewell.'
 >Glamis thou art, and Cawdor; and shalt be
 >What thou art promised: yet do I fear thy nature;
->It is too full o' the milk of human kindness
+>It is too full o' the i{milk of human kindness}
 >To catch the nearest way: thou wouldst be great;
 >Art not without ambition, but without
 >The illness should attend it: what thou wouldst highly,
@@ -589,14 +589,14 @@ The Tragedy of Macbeth
 ~Hautboysand torches. Enter a Sewer, and divers Servants with dishes and service, and pass over the stage. Then enter MACBETH
 *MACBETH
 >If it were done when 'tis done, then 'twere well
->It were done quickly: if the assassination
+>It were done quickly: if the w{assassination}
 >Could trammel up the consequence, and catch
 >With his surcease success; that but this blow
 >Might be the be-all and the end-all here,
 >But here, upon this bank and shoal of time,
 >We'ld jump the life to come. But in these cases
 >We still have judgment here; that we but teach
->Bloody instructions, which, being taught, return
+>w{bloody} instructions, which, being taught, return
 >To plague the inventor: this even-handed justice
 >Commends the ingredients of our poison'd chalice
 >To our own lips. He's here in double trust;
@@ -756,7 +756,7 @@ The Tragedy of Macbeth
 >Go bid thy mistress, when my drink is ready,
 >She strike upon the bell. Get thee to bed.
 ~Exit Servant
->Is this a dagger which I see before me,
+>i{Is this a dagger which I see before me},
 >The handle toward my hand? Come, let me clutch thee.
 >I have thee not, and yet I see thee still.
 >Art thou not, fatal vision, sensible
@@ -771,7 +771,7 @@ The Tragedy of Macbeth
 >Or else worth all the rest; I see thee still,
 >And on thy blade and dudgeon gouts of blood,
 >Which was not so before. There's no such thing:
->It is the bloody business which informs
+>It is the w{bloody} business which informs
 >Thus to mine eyes. Now o'er the one halfworld
 >Nature seems dead, and wicked dreams abuse
 >The curtain'd sleep; witchcraft celebrates
@@ -832,10 +832,10 @@ The Tragedy of Macbeth
 *LADY MACBETH
 >Donalbain.
 *MACBETH
->This is a sorry sight.
+>This is i{a sorry sight}.
 ~Looking on his hands
 *LADY MACBETH
->A foolish thought, to say a sorry sight.
+>A foolish thought, to say i{a sorry sight}.
 *MACBETH
 >There's one did laugh in's sleep, and one cried
 >'Murder!'
@@ -897,7 +897,7 @@ The Tragedy of Macbeth
 >What hands are here? ha! they pluck out mine eyes.
 >Will all great Neptune's ocean wash this blood
 >Clean from my hand? No, this my hand will rather
->The multitudinous seas in incarnadine,
+>The w{multitudinous} seas in incarnadine,
 >Making the green one red.
 ~Re-enter LADY MACBETH
 *LADY MACBETH
@@ -1142,8 +1142,8 @@ The Tragedy of Macbeth
 >Look to the lady:
 ~LADY MACBETH is carried out
 >And when we have our naked frailties hid,
->That suffer in exposure, let us meet,
->And question this most bloody piece of work,
+>That suffer in w{exposure}, let us meet,
+>And question this most w{bloody} piece of work,
 >To know it further. Fears and scruples shake us:
 >In the great hand of God I stand; and thence
 >Against the undivulged pretence I fight
@@ -1166,7 +1166,7 @@ The Tragedy of Macbeth
 >To Ireland, I; our separated fortune
 >Shall keep us both the safer: where we are,
 >There's daggers in men's smiles: the near in blood,
->The nearer bloody.
+>The nearer w{bloody}.
 *MALCOLM
 >This murderous shaft that's shot
 >Hath not yet lighted, and our safest way
@@ -1185,7 +1185,7 @@ The Tragedy of Macbeth
 *ROSS
 >Ah, good father,
 >Thou seest, the heavens, as troubled with man's act,
->Threaten his bloody stage: by the clock, 'tis day,
+>Threaten his w{bloody} stage: by the clock, 'tis day,
 >And yet dark night strangles the travelling lamp:
 >Is't night's predominance, or the day's shame,
 >That darkness does the face of earth entomb,
@@ -1204,14 +1204,14 @@ The Tragedy of Macbeth
 *Old Man
 >'Tis said they eat each other.
 *ROSS
->They did so, to the amazement of mine eyes
+>They did so, to the w{amazement} of mine eyes
 >That look'd upon't. Here comes the good Macduff.
 ~Enter MACDUFF
 >How goes the world, sir, now?
 *MACDUFF
 >Why, see you not?
 *ROSS
->Is't known who did this more than bloody deed?
+>Is't known who did this more than w{bloody} deed?
 *MACDUFF
 >Those that Macbeth hath slain.
 *ROSS
@@ -1299,7 +1299,7 @@ The Tragedy of Macbeth
 *BANQUO
 >My lord, I will not.
 *MACBETH
->We hear, our bloody cousins are bestow'd
+>We hear, our w{bloody} cousins are bestow'd
 >In England and in Ireland, not confessing
 >Their cruel parricide, filling their hearers
 >With strange invention: but of that to-morrow,
@@ -1413,7 +1413,7 @@ The Tragedy of Macbeth
 *Both Murderers
 >True, my lord.
 *MACBETH
->So is he mine; and in such bloody distance,
+>So is he mine; and in such w{bloody} distance,
 >That every minute of his being thrusts
 >Against my near'st of life: and though I could
 >With barefaced power sweep him from my sight
@@ -1485,7 +1485,7 @@ The Tragedy of Macbeth
 >Whom we, to gain our peace, have sent to peace,
 >Than on the torture of the mind to lie
 >In restless ecstasy. Duncan is in his grave;
->After life's fitful fever he sleeps well;
+>After life's w{fitful} fever he sleeps well;
 >Treason has done his worst: nor steel, nor poison,
 >Malice domestic, foreign levy, nothing,
 >Can touch him further.
@@ -1521,7 +1521,7 @@ The Tragedy of Macbeth
 >Be innocent of the knowledge, dearest chuck,
 >Till thou applaud the deed. Come, seeling night,
 >Scarf up the tender eye of pitiful day;
->And with thy bloody and invisible hand
+>And with thy w{bloody} and invisible hand
 >Cancel and tear to pieces that great bond
 >Which keeps me pale! Light thickens; and the crow
 >Makes wing to the rooky wood:
@@ -1796,7 +1796,7 @@ The Tragedy of Macbeth
 >By magot-pies and choughs and rooks brought forth
 >The secret'st man of blood. What is the night?
 *LADY MACBETH
->Almost at odds with morning, which is which.
+>Almost at odds with morning, i{which is which}.
 *MACBETH
 >How say'st thou, that Macduff denies his person
 >At our great bidding?
@@ -1880,7 +1880,7 @@ The Tragedy of Macbeth
 >It was for Malcolm and for Donalbain
 >To kill their gracious father? damned fact!
 >How it did grieve Macbeth! did he not straight
->In pious rage the two delinquents tear,
+>In w{pious} rage the two delinquents tear,
 >That were the slaves of drink and thralls of sleep?
 >Was not that nobly done? Ay, and wisely too;
 >For 'twould have anger'd any heart alive
@@ -1898,7 +1898,7 @@ The Tragedy of Macbeth
 >The son of Duncan,
 >From whom this tyrant holds the due of birth
 >Lives in the English court, and is received
->Of the most pious Edward with such grace
+>Of the most w{pious} Edward with such grace
 >That the malevolence of fortune nothing
 >Takes from his high respect: thither Macduff
 >Is gone to pray the holy king, upon his aid
@@ -1906,7 +1906,7 @@ The Tragedy of Macbeth
 >That, by the help of these--with Him above
 >To ratify the work--we may again
 >Give to our tables meat, sleep to our nights,
->Free from our feasts and banquets bloody knives,
+>Free from our feasts and banquets w{bloody} knives,
 >Do faithful homage and receive free honours:
 >All which we pine for now: and this report
 >Hath so exasperate the king that he
@@ -2049,13 +2049,13 @@ The Tragedy of Macbeth
 *First Witch
 >He will not be commanded: here's another,
 >More potent than the first.
-~Thunder. Second Apparition: A bloody Child
+~Thunder. Second Apparition: A w{bloody} Child
 >Second Apparition
 >Macbeth! Macbeth! Macbeth!
 *MACBETH
 >Had I three ears, I'ld hear thee.
 >Second Apparition
->Be bloody, bold, and resolute; laugh to scorn
+>Be w{bloody}, bold, and resolute; laugh to scorn
 >The power of man, for none of woman born
 >Shall harm Macbeth.
 ~Descends
@@ -2401,7 +2401,7 @@ The Tragedy of Macbeth
 >Of horrid hell can come a devil more damn'd
 >In evils to top Macbeth.
 *MALCOLM
->I grant him bloody,
+>I grant him w{bloody},
 >Luxurious, avaricious, false, deceitful,
 >Sudden, malicious, smacking of every sin
 >That has a name: but there's no bottom, none,
@@ -2460,7 +2460,7 @@ The Tragedy of Macbeth
 *MACDUFF
 >Fit to govern!
 >No, not to live. O nation miserable,
->With an untitled tyrant bloody-scepter'd,
+>With an untitled tyrant w{bloody}-scepter'd,
 >When shalt thou see thy wholesome days again,
 >Since that the truest issue of thy throne
 >By his own interdiction stands accursed,
@@ -2640,7 +2640,7 @@ The Tragedy of Macbeth
 >He has no children. All my pretty ones?
 >Did you say all? O hell-kite! All?
 >What, all my pretty chickens and their dam
->At one fell swoop?
+>i{At one fell swoop}?
 *MALCOLM
 >Dispute it like a man.
 *MACDUFF
@@ -3141,7 +3141,7 @@ The Tragedy of Macbeth
 >As easy mayst thou the intrenchant air
 >With thy keen sword impress as make me bleed:
 >Let fall thy blade on vulnerable crests;
->I bear a charmed life, which must not yield,
+>I bear i{a charmed life}, which must not yield,
 >To one of woman born.
 *MACDUFF
 >Despair thy charm;

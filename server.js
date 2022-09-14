@@ -18,7 +18,7 @@ const pool = new Pool({
     ssl: ssl
 });
 
-function renderPlay(book_src) {
+async function renderPlay(book_src) {
     let f = false;
     let book_content = '';
     while (book_src.length > 0) {
@@ -52,7 +52,6 @@ function renderPlay(book_src) {
             book_content += '<br>';
         }
 
-        
         if (book_src.indexOf('\n') != -1) {
             book_content += book_src.slice(1, book_src.indexOf('\n'));
             book_src = book_src.substring(book_src.indexOf('\n')+1);
@@ -68,6 +67,26 @@ function renderPlay(book_src) {
             book_content += '</p>';
         }
     }
+
+    let client = await pool.connect();
+
+    book_content = book_content.replace(/w\{(.*)\}/g, '<a href="/dictionary/$1" class="book-word">$1</a>');
+    // let idioms = Array.from(book_content.matchAll(/i\{(.*)\}/g));
+    let idioms = Array.from(book_content.matchAll(/i\{(.*)\}/g));
+    for (let i = 0; i < idioms.length; i++) {
+        let data =  await pool.query('SELECT * FROM dict WHERE LOWER(title) = LOWER($1)', [idioms[i][1]]);
+        let idiom_href = data.rows[0].link;
+        book_content = book_content.replace(/i\{(.*)\}/, '<a href="/dictionary/' + idiom_href + '" class="book-idiom">$1</a>');
+    }
+
+    let puns = Array.from(book_content.matchAll(/p\{(.*)\}/g));
+    for (let i = 0; i < puns.length; i++) {
+        let data =  await pool.query('SELECT * FROM dict WHERE LOWER(title) = LOWER($1)', [puns[i][1]]);
+        let pun_href = data.rows[0].link;
+        book_content = book_content.replace(/p\{(.*)\}/, '<a href="/dictionary/' + pun_href + '" class="book-pun">$1</a>');
+    }
+
+    client.release();
     return book_content;
 }
 
@@ -91,7 +110,7 @@ app.get('/books', (req, res) => {
     });
 });
 
-app.get('/books/:route', (req, res, next) => {
+app.get('/books/:route', async (req, res, next) => {
     // res.sendFile(path.join(__dirname, 'index.html'));
     let current_year = new Date().getFullYear();
     let view = req.query.view || 'contents';
@@ -123,7 +142,7 @@ app.get('/books/:route', (req, res, next) => {
                 book_src = book_src.substring(book_src.indexOf('#'));
             }
         } else if (view == 'fulltext') {
-            book_content = renderPlay(book_src);
+            book_content = await renderPlay(book_src);
         } else if (view.match(/^act\d$/).length != 0) {
             is_act = true;
             let act_num = +view.substring(3);
@@ -137,7 +156,7 @@ app.get('/books/:route', (req, res, next) => {
             else
                 book_src = '#' + book_src;
 
-            book_content = renderPlay(book_src);
+            book_content = await renderPlay(book_src);
         } else {
             next();
         }
@@ -309,7 +328,8 @@ app.post('/ajax/dictionary-book', (req, res) => {
         let rand;
         while (true) {
             rand = Math.floor(Math.random() * books_count);
-            if (response.data.items[rand].volumeInfo.authors[0] != 'William Shakespeare') break;
+            if (response.data.items[rand].volumeInfo.authors)
+                if (response.data.items[rand].volumeInfo.authors[0] != 'William Shakespeare') break;
         }
 
         let book = response.data.items[rand];

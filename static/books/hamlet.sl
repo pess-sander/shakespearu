@@ -183,7 +183,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >That was and is the question of these wars.
 *HORATIO
 >A mote it is to trouble the mind's eye.
->In the most high and palmy state of Rome,
+>In the most high and w{palmy} state of Rome,
 >A little ere the mightiest Julius fell,
 >The graves stood tenantless and the sheeted dead
 >Did squeak and gibber in the Roman streets:
@@ -224,7 +224,7 @@ The Tragedy of Hamlet, Prince of Denmark
 ~Exit Ghost
 >We do it wrong, being so majestical,
 >To offer it the show of violence;
->For it is, as the air, invulnerable,
+>For it is, as the air, w{invulnerable},
 >And our vain blows malicious mockery.
 *BERNARDO
 >It was about to speak, when the cock crew.
@@ -274,7 +274,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >Therefore our sometime sister, now our queen,
 >The imperial jointress to this warlike state,
 >Have we, as 'twere with a defeated joy,--
->With an auspicious and a dropping eye,
+>With an w{auspicious} and a dropping eye,
 >With mirth in funeral and with dirge in marriage,
 >In equal scale weighing delight and dole,--
 >Taken to wife: nor have we herein barr'd
@@ -341,13 +341,13 @@ The Tragedy of Hamlet, Prince of Denmark
 *KING CLAUDIUS
 >How is it that the clouds still hang on you?
 *HAMLET
->Not so, my lord; I am too much i' the sun.
+>p{Not so, my lord; I am too much i' the sun.}
 *QUEEN GERTRUDE
 >Good Hamlet, cast thy nighted colour off,
 >And let thine eye look like a friend on Denmark.
 >Do not for ever with thy vailed lids
 >Seek for thy noble father in the dust:
->Thou know'st 'tis common; all that lives must die,
+>Thou know'st 'tis common; i{all that lives must die},
 >Passing through nature to eternity.
 *HAMLET
 >Ay, madam, it is common.
@@ -374,7 +374,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >In filial obligation for some term
 >To do obsequious sorrow: but to persever
 >In obstinate condolement is a course
->Of impious stubbornness; 'tis unmanly grief;
+>Of imw{pious} stubbornness; 'tis unmanly grief;
 >It shows a will most incorrect to heaven,
 >A heart unfortified, a mind impatient,
 >An understanding simple and unschool'd:
@@ -431,7 +431,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >Must I remember? why, she would hang on him,
 >As if increase of appetite had grown
 >By what it fed on: and yet, within a month--
->Let me not think on't--Frailty, thy name is woman!--
+>Let me not think on't--i{Frailty, thy name is woman}!--
 >A little month, or ere those shoes were old
 >With which she follow'd my poor father's body,
 >Like Niobe, all tears:--why she, even she--
@@ -486,7 +486,7 @@ The Tragedy of Hamlet, Prince of Denmark
 *HORATIO
 >Where, my lord?
 *HAMLET
->In my mind's eye, Horatio.
+>i{In my mind's eye}, Horatio.
 *HORATIO
 >I saw him once; he was a goodly king.
 *HAMLET
@@ -565,7 +565,7 @@ The Tragedy of Hamlet, Prince of Denmark
 *HAMLET
 >What, look'd he frowningly?
 *HORATIO
->A countenance more in sorrow than in anger.
+>i{A countenance more in sorrow than in anger}.
 *HAMLET
 >Pale or red?
 *HORATIO
@@ -676,7 +676,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >Do not, as some ungracious pastors do,
 >Show me the steep and thorny way to heaven;
 >Whiles, like a puff'd and reckless libertine,
->Himself the primrose path of dalliance treads,
+>Himself the i{primrose path} of dalliance treads,
 >And recks not his own rede.
 *LAERTES
 >O, fear me not.
@@ -704,8 +704,8 @@ The Tragedy of Hamlet, Prince of Denmark
 >But not express'd in fancy; rich, not gaudy;
 >For the apparel oft proclaims the man,
 >And they in France of the best rank and station
->Are of a most select and generous chief in that.
->Neither a borrower nor a lender be;
+>Are of a most select and w{generous} chief in that.
+>i{Neither a borrower nor a lender be};
 >For loan oft loses both itself and friend,
 >And borrowing dulls the edge of husbandry.
 >This above all: to thine ownself be true,
@@ -778,7 +778,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >Do not believe his vows; for they are brokers,
 >Not of that dye which their investments show,
 >But mere implorators of unholy suits,
->Breathing like sanctified and pious bawds,
+>Breathing like sanctified and w{pious} bawds,
 >The better to beguile. This is for all:
 >I would not, in plain terms, from this time forth,
 >Have you so slander any moment leisure,
@@ -918,7 +918,7 @@ The Tragedy of Hamlet, Prince of Denmark
 *HORATIO
 >Have after. To what issue will this come?
 *MARCELLUS
->Something is rotten in the state of Denmark.
+>i{Something is rotten in the state of Denmark}.
 *HORATIO
 >Heaven will direct it.
 *MARCELLUS
@@ -1340,7 +1340,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >He took me by the wrist and held me hard;
 >Then goes he to the length of all his arm;
 >And, with his other hand thus o'er his brow,
->He falls to such perusal of my face
+>He falls to such w{perusal} of my face
 >As he would draw it. Long stay'd he so;
 >At last, a little shaking of mine arm
 >And thrice his head thus waving up and down,
@@ -1498,7 +1498,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >What majesty should be, what duty is,
 >Why day is day, night night, and time is time,
 >Were nothing but to waste night, day and time.
->Therefore, since brevity is the soul of wit,
+>Therefore, since i{brevity is the soul of wit},
 >And tediousness the limbs and outward flourishes,
 >I will be brief: your noble son is mad:
 >Mad call I it; for, to define true madness,
@@ -1619,7 +1619,7 @@ The Tragedy of Hamlet, Prince of Denmark
 *LORD POLONIUS
 >Do you know me, my lord?
 *HAMLET
->Excellent well; you are a fishmonger.
+>Excellent well; p{you are a fishmonger.}
 *LORD POLONIUS
 >Not I, my lord.
 *HAMLET
@@ -1808,7 +1808,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >o'erhanging firmament, this majestical roof fretted
 >with golden fire, why, it appears no other thing to
 >me than a foul and pestilent congregation of vapours.
->What a piece of work is a man! how noble in reason!
+>i{What a piece of work is a man}! how noble in reason!
 >how infinite in faculty! in form and moving how
 >express and admirable! in action how like an angel!
 >in apprehension how like a god! the beauty of the
@@ -1962,7 +1962,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >'As by lot, God wot,'
 >and then, you know,
 >'It came to pass, as most like it was,'--
->the first row of the pious chanson will show you
+>the first row of the w{pious} chanson will show you
 >more; for look, where my abridgement comes.
 ~Enter four or five Players
 >You are welcome, masters; welcome, all. I am glad
@@ -2151,7 +2151,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >But I am pigeon-liver'd and lack gall
 >To make oppression bitter, or ere this
 >I should have fatted all the region kites
->With this slave's offal: bloody, bawdy villain!
+>With this slave's offal: w{bloody}, bawdy villain!
 >Remorseless, treacherous, lecherous, kindless villain!
 >O, vengeance!
 >Why, what an ass am I! This is most brave,
@@ -2255,7 +2255,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >That show of such an exercise may colour
 >Your loneliness. We are oft to blame in this,--
 >'Tis too much proved--that with devotion's visage
->And pious action we do sugar o'er
+>And w{pious} action we do sugar o'er
 >The devil himself.
 *KING CLAUDIUS
 >[Aside] O, 'tis too true!
@@ -2269,9 +2269,9 @@ The Tragedy of Hamlet, Prince of Denmark
 ~Exeunt KING CLAUDIUS and POLONIUS
 ~Enter HAMLET
 *HAMLET
->To be, or not to be, that is the question,
+>i{To be, or not to be, that is the question},
 >Whether 'tis nobler in the mind to suffer
->The slings and arrows of outrageous fortune,
+>i{The slings and arrows of outrageous fortune},
 >Or to take arms against a sea of troubles,
 >And by opposing end them? To die: to sleep;
 >No more; and by a sleep to say we end
@@ -2402,7 +2402,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >Now see that noble and most sovereign reason,
 >Like sweet bells jangled, out of tune and harsh;
 >That unmatch'd form and feature of blown youth
->Blasted with ecstasy: O, woe is me,
+>Blasted with ecstasy: O, i{woe is me},
 >To have seen what I have seen, see what I see!
 ~Re-enter KING CLAUDIUS and POLONIUS
 *KING CLAUDIUS
@@ -2573,8 +2573,8 @@ The Tragedy of Hamlet, Prince of Denmark
 >I did enact Julius Caesar: I was killed i' the
 >Capitol; Brutus killed me.
 *HAMLET
->It was a brute part of him to kill so capital a calf
->there. Be the players ready?
+>p{It was a brute part of him to kill so capital a calf there.}
+>Be the players ready?
 *ROSENCRANTZ
 >Ay, my lord; they stay upon your patience.
 *QUEEN GERTRUDE
@@ -2665,7 +2665,7 @@ The Tragedy of Hamlet, Prince of Denmark
 *Player Queen
 >So many journeys may the sun and moon
 >Make us again count o'er ere love be done!
->But, woe is me, you are so sick of late,
+>But, i{woe is me}, you are so sick of late,
 >So far from cheer and from your former state,
 >That I distrust you. Yet, though I distrust,
 >Discomfort you, my lord, it nothing must:
@@ -2888,7 +2888,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >more, but to the matter: my mother, you say,--
 *ROSENCRANTZ
 >Then thus she says; your behavior hath struck her
->into amazement and admiration.
+>into w{amazement} and admiration.
 *HAMLET
 >O wonderful son, that can so astonish a mother! But
 >is there no sequel at the heels of this mother's
@@ -3171,9 +3171,9 @@ The Tragedy of Hamlet, Prince of Denmark
 >Nay, I know not:
 >Is it the king?
 *QUEEN GERTRUDE
->O, what a rash and bloody deed is this!
+>O, what a rash and w{bloody} deed is this!
 *HAMLET
->A bloody deed! almost as bad, good mother,
+>A w{bloody} deed! almost as bad, good mother,
 >As kill a king, and marry with his brother.
 *QUEEN GERTRUDE
 >As kill a king!
@@ -3276,12 +3276,12 @@ The Tragedy of Hamlet, Prince of Denmark
 >Alas, he's mad!
 *HAMLET
 >Do you not come your tardy son to chide,
->That, lapsed in time and passion, lets go by
+>That, w{lapsed} in time and passion, lets go by
 >The important acting of your dread command? O, say!
 *Ghost
 >Do not forget: this visitation
 >Is but to whet thy almost blunted purpose.
->But, look, amazement on thy mother sits:
+>But, look, w{amazement} on thy mother sits:
 >O, step between her and her fighting soul:
 >Conceit in weakest bodies strongest works:
 >Speak to her, Hamlet.
@@ -3440,7 +3440,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >It had been so with us, had we been there:
 >His liberty is full of threats to all;
 >To you yourself, to us, to every one.
->Alas, how shall this bloody deed be answer'd?
+>Alas, how shall this w{bloody} deed be answer'd?
 >It will be laid to us, whose providence
 >Should have kept short, restrain'd and out of haunt,
 >This mad young man: but so much was our love,
@@ -3721,7 +3721,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >Whereon the numbers cannot try the cause,
 >Which is not tomb enough and continent
 >To hide the slain? O, from this time forth,
->My thoughts be bloody, or be nothing worth!
+>My thoughts be w{bloody}, or be nothing worth!
 ~Exit
 %SCENE V. Elsinore. A room in the castle.
 ~Enter QUEEN GERTRUDE, HORATIO, and a Gentleman
@@ -4009,7 +4009,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >No, no, he is dead:
 >Go to thy death-bed:
 >He never will come again.
->His beard was as white as snow,
+>His beard was i{as white as snow},
 >All flaxen was his poll:
 >He is gone, he is gone,
 >And we cast away moan:
@@ -4270,7 +4270,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >And set a double varnish on the fame
 >The Frenchman gave you, bring you in fine together
 >And wager on your heads: he, being remiss,
->Most generous and free from all contriving,
+>Most w{generous} and free from all contriving,
 >Will not peruse the foils; so that, with ease,
 >Or with a little shuffling, you may choose
 >A sword unbated, and in a pass of practise
@@ -5108,7 +5108,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >His madness is poor Hamlet's enemy.
 >Sir, in this audience,
 >Let my disclaiming from a purposed evil
->Free me so far in your most generous thoughts,
+>Free me so far in your most w{generous} thoughts,
 >That I have shot mine arrow o'er the house,
 >And hurt my brother.
 *LAERTES
@@ -5317,7 +5317,7 @@ The Tragedy of Hamlet, Prince of Denmark
 >But I do prophesy the election lights
 >On Fortinbras: he has my dying voice;
 >So tell him, with the occurrents, more and less,
->Which have solicited. The rest is silence.
+>Which have solicited. p{The rest is silence.}
 ~Dies
 *HORATIO
 >Now cracks a noble heart. Good night sweet prince:
@@ -5346,13 +5346,13 @@ The Tragedy of Hamlet, Prince of Denmark
 >Not from his mouth,
 >Had it the ability of life to thank you:
 >He never gave commandment for their death.
->But since, so jump upon this bloody question,
+>But since, so jump upon this w{bloody} question,
 >You from the Polack wars, and you from England,
 >Are here arrived give order that these bodies
 >High on a stage be placed to the view;
 >And let me speak to the yet unknowing world
 >How these things came about: so shall you hear
->Of carnal, bloody, and unnatural acts,
+>Of carnal, w{bloody}, and unnatural acts,
 >Of accidental judgments, casual slaughters,
 >Of deaths put on by cunning and forced cause,
 >And, in this upshot, purposes mistook

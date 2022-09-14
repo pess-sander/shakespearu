@@ -1,0 +1,19 @@
+.home-wrapper {
+    padding: 40px 0;
+}
+
+.portrait {
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 40%;
+    /* border: 3px solid #333; */
+}
+
+.home-text {
+    width: 70%;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.8em;
+    margin: 20px auto;
+}

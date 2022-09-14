@@ -158,7 +158,7 @@ The Tragedy of Romeo and Juliet
 >Will they not hear? What, ho! you men, you beasts,
 >That quench the fire of your pernicious rage
 >With purple fountains issuing from your veins,
->On pain of torture, from those bloody hands
+>On pain of torture, from those w{bloody} hands
 >Throw your mistemper'd weapons to the ground,
 >And hear the sentence of your moved prince.
 >Three civil brawls, bred of an airy word,
@@ -578,7 +578,7 @@ The Tragedy of Romeo and Juliet
 >Yes, madam: yet I cannot choose but laugh,
 >To think it should leave crying and say 'Ay.'
 >And yet, I warrant, it had upon its brow
->A bump as big as a young cockerel's stone;
+>A w{bump} as big as a young cockerel's stone;
 >A parlous knock; and it cried bitterly:
 >'Yea,' quoth my husband,'fall'st upon thy face?
 >Thou wilt fall backward when thou comest to age;
@@ -666,8 +666,7 @@ The Tragedy of Romeo and Juliet
 >But let them measure us by what they will;
 >We'll measure them a measure, and be gone.
 *ROMEO
->Give me a torch: I am not for this ambling;
->Being but heavy, I will bear the light.
+>p{Give me a torch: I am not for this ambling; Being but heavy, I will bear the light.}
 *MERCUTIO
 >Nay, gentle Romeo, we must have you dance.
 *ROMEO
@@ -727,10 +726,8 @@ The Tragedy of Romeo and Juliet
 >And so did I.
 *ROMEO
 >Well, what was yours?
-*MERCUTIO
->That dreamers often lie.
-*ROMEO
->In bed asleep, while they do dream things true.
+*MERCUTIO, ROMEO
+>p{-That dreamers often lie. -In bed asleep, while they do dream things true.}
 *MERCUTIO
 >O, then, I see Queen Mab hath been with you.
 >She is the fairies' midwife, and she comes
@@ -1589,7 +1586,7 @@ The Tragedy of Romeo and Juliet
 *ROMEO
 >Switch and spurs, switch and spurs; or I'll cry a match.
 *MERCUTIO
->Nay, if thy wits run the wild-goose chase, I have
+>Nay, if thy wits run the i{wild-goose chase}, I have
 >done, for thou hast more of the wild-goose in one of
 >thy wits than, I am sure, I have in my whole five:
 >was I with you there for the goose?
@@ -2176,7 +2173,7 @@ The Tragedy of Romeo and Juliet
 >For blood of ours, shed blood of Montague.
 >O cousin, cousin!
 *PRINCE
->Benvolio, who began this bloody fray?
+>Benvolio, who began this w{bloody} fray?
 *BENVOLIO
 >Tybalt, here slain, whom Romeo's hand did slay;
 >Romeo that spoke him fair, bade him bethink
@@ -2298,7 +2295,7 @@ The Tragedy of Romeo and Juliet
 *Nurse
 >I saw the wound, I saw it with mine eyes,--
 >God save the mark!--here on his manly breast:
->A piteous corse, a bloody piteous corse;
+>A piteous corse, a w{bloody} piteous corse;
 >Pale, pale as ashes, all bedaub'd in blood,
 >All in gore-blood; I swounded at the sight.
 *JULIET
@@ -2453,7 +2450,7 @@ The Tragedy of Romeo and Juliet
 >And little mouse, every unworthy thing,
 >Live here in heaven and may look on her;
 >But Romeo may not: more validity,
->More honourable state, more courtship lives
+>More honourable state, more w{courtship} lives
 >In carrion-flies than Romeo: they my seize
 >On the white wonder of dear Juliet's hand
 >And steal immortal blessing from her lips,
@@ -3111,7 +3108,7 @@ The Tragedy of Romeo and Juliet
 >Turn to another, this shall slay them both:
 >Therefore, out of thy long-experienced time,
 >Give me some present counsel, or, behold,
->'Twixt my extremes and me this bloody knife
+>'Twixt my extremes and me this w{bloody} knife
 >Shall play the umpire, arbitrating that
 >Which the commission of thy years and art
 >Could to no issue of true honour bring.
@@ -3308,7 +3305,7 @@ The Tragedy of Romeo and Juliet
 >As in a vault, an ancient receptacle,
 >Where, for these many hundred years, the bones
 >Of all my buried ancestors are packed:
->Where bloody Tybalt, yet but green in earth,
+>Where w{bloody} Tybalt, yet but green in earth,
 >Lies festering in his shroud; where, as they say,
 >At some hours in the night spirits resort;--
 >Alack, alack, is it not like that I,
@@ -3662,7 +3659,7 @@ The Tragedy of Romeo and Juliet
 >That the life-weary taker may fall dead
 >And that the trunk may be discharged of breath
 >As violently as hasty powder fired
->Doth hurry from the fatal cannon's womb.
+>Doth w{hurry} from the fatal cannon's womb.
 *Apothecary
 >Such mortal drugs I have; but Mantua's law
 >Is death to any he that utters them.
@@ -3860,7 +3857,7 @@ The Tragedy of Romeo and Juliet
 >Thou art not conquer'd; beauty's ensign yet
 >Is crimson in thy lips and in thy cheeks,
 >And death's pale flag is not advanced there.
->Tybalt, liest thou there in thy bloody sheet?
+>Tybalt, liest thou there in thy w{bloody} sheet?
 >O, what more favour can I do to thee,
 >Than with that hand that cut thy youth in twain
 >To sunder his that was thine enemy?
@@ -3874,7 +3871,7 @@ The Tragedy of Romeo and Juliet
 >Depart again: here, here will I remain
 >With worms that are thy chamber-maids; O, here
 >Will I set up my everlasting rest,
->And shake the yoke of inauspicious stars
+>And shake the yoke of w{inauspicious} stars
 >From this world-wearied flesh. Eyes, look your last!
 >Arms, take your last embrace! and, lips, O you
 >The doors of breath, seal with a righteous kiss
@@ -3977,7 +3974,7 @@ The Tragedy of Romeo and Juliet
 *PAGE
 >This is the place; there, where the torch doth burn.
 *First Watchman
->The ground is bloody; search about the churchyard:
+>The ground is w{bloody}; search about the churchyard:
 >Go, some of you, whoe'er you find attach.
 >Pitiful sight! here lies the county slain,
 >And Juliet bleeding, warm, and newly dead,

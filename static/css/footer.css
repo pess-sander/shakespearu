@@ -6,10 +6,23 @@
 .footer .content {
     background-color: transparent;
     text-align: center;
-    padding-top: 70px;
+    padding-top: 55px;
     font-size: 1.15em;
     font-family: 'PT Sans', sans-serif;
     color: black;
     background-color: rgb(251, 236, 235);
     border-top: rgb(238, 184, 184) 2px solid;
+}
+
+.tt-link {
+    margin-top: 7px;
+}
+
+.tt-link a {
+    text-decoration: none;
+    color: #444;
+}
+
+.tt-link a:hover {
+    color: black;
 }
