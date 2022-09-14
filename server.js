@@ -75,6 +75,7 @@ async function renderPlay(book_src) {
     let idioms = Array.from(book_content.matchAll(/i\{(.*)\}/g));
     for (let i = 0; i < idioms.length; i++) {
         let data =  await pool.query('SELECT * FROM dict WHERE LOWER(title) = LOWER($1)', [idioms[i][1]]);
+        console.log(idioms[i][1]);
         let idiom_href = data.rows[0].link;
         book_content = book_content.replace(/i\{(.*)\}/, '<a href="/dictionary/' + idiom_href + '" class="book-idiom">$1</a>');
     }
