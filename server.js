@@ -69,19 +69,25 @@ async function renderPlay(book_src) {
         }
     }
 
+    function getChartData(query) {
+        
+    }
+
     let client = await pool.connect();
 
     book_content = book_content.replace(/w{([^}]*)}/g, '<a href="/dictionary/$1" class="book-word">$1</a>');
     // let idioms = Array.from(book_content.matchAll(/i\{(.*)\}/g));
     let idioms = book_content.match(/i{([^}]*)}/g);
-    for (let i = 0; i < idioms.length; i++) {
-        //let sql = escape('SELECT * FROM dict WHERE LOWER(title) = LOWER(\'%s\');', [idioms[i].slice(2, -1)]);
-        let sql_esc = idioms[i].slice(2, -1).replace(/\'/g, '\'\'');
-        let sql = 'SELECT * FROM dict WHERE LOWER(title) = LOWER(\'' + sql_esc + '\');';
-        let data =  await pool.query(sql);
-        //console.log(idioms[i][1]);
-        let idiom_href = data.rows[0].link;
-        book_content = book_content.replace(/i{([^}]*)}/, '<a href="/dictionary/' + idiom_href + '" class="book-idiom">$1</a>');
+    if (idioms != null) {
+        for (let i = 0; i < idioms.length; i++) {
+            //let sql = escape('SELECT * FROM dict WHERE LOWER(title) = LOWER(\'%s\');', [idioms[i].slice(2, -1)]);
+            let sql_esc = idioms[i].slice(2, -1).replace(/\'/g, '\'\'');
+            let sql = 'SELECT * FROM dict WHERE LOWER(title) = LOWER(\'' + sql_esc + '\');';
+            let data =  await pool.query(sql);
+            //console.log(idioms[i][1]);
+            let idiom_href = data.rows[0].link;
+            book_content = book_content.replace(/i{([^}]*)}/, '<a href="/dictionary/' + idiom_href + '" class="book-idiom">$1</a>');
+        }
     }
 
     // console.log('\n');
