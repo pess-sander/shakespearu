@@ -78,25 +78,22 @@ async function renderPlay(book_src) {
         //let sql = escape('SELECT * FROM dict WHERE LOWER(title) = LOWER(\'%s\');', [idioms[i].slice(2, -1)]);
         let sql_esc = idioms[i].slice(2, -1).replace(/\'/g, '\'\'');
         let sql = 'SELECT * FROM dict WHERE LOWER(title) = LOWER(\'' + sql_esc + '\');';
-        console.log(sql_esc);
         let data =  await pool.query(sql);
         //console.log(idioms[i][1]);
         let idiom_href = data.rows[0].link;
-        book_content = book_content.replace(/i\{(.*)\}/, '<a href="/dictionary/' + idiom_href + '" class="book-idiom">$1</a>');
+        book_content = book_content.replace(/i{([^}]*)}/, '<a href="/dictionary/' + idiom_href + '" class="book-idiom">$1</a>');
     }
 
     // console.log('\n');
     let puns = book_content.match(/p{([^}]*)}/g);
-    console.log(puns);
     // console.log(puns);
     if (puns != null) {
         for (let i = 0; i < puns.length; i++) {
             let sql_esc = puns[i].slice(2, -1).replace(/\'/g, '\'\'');
             let sql = 'SELECT * FROM dict WHERE LOWER(title) = LOWER(\'' + sql_esc + '\');';
-            console.log(sql);
             let data =  await pool.query(sql);
             let pun_href = data.rows[0].link;
-            book_content = book_content.replace(/p\{(.*)\}/, '<a href="/dictionary/' + pun_href + '" class="book-pun">$1</a>');
+            book_content = book_content.replace(/p{([^}]*)}/, '<a href="/dictionary/' + pun_href + '" class="book-pun">$1</a>');
         }
     }
 
