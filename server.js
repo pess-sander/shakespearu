@@ -71,9 +71,9 @@ async function renderPlay(book_src) {
 
     let client = await pool.connect();
 
-    book_content = book_content.replace(/w\{(.*)\}/g, '<a href="/dictionary/$1" class="book-word">$1</a>');
+    book_content = book_content.replace(/w{([^}]*)}/g, '<a href="/dictionary/$1" class="book-word">$1</a>');
     // let idioms = Array.from(book_content.matchAll(/i\{(.*)\}/g));
-    let idioms = book_content.match(/i\{(.*)\}/g);
+    let idioms = book_content.match(/i{([^}]*)}/g);
     for (let i = 0; i < idioms.length; i++) {
         //let sql = escape('SELECT * FROM dict WHERE LOWER(title) = LOWER(\'%s\');', [idioms[i].slice(2, -1)]);
         let sql_esc = idioms[i].slice(2, -1).replace(/\'/g, '\'\'');
@@ -86,7 +86,7 @@ async function renderPlay(book_src) {
     }
 
     // console.log('\n');
-    let puns = book_content.match(/p\{(.*)\}/g);
+    let puns = book_content.match(/p{([^}]*)}/g);
     console.log(puns);
     // console.log(puns);
     if (puns != null) {
