@@ -279,6 +279,31 @@ app.get('/dictionary/:route', (req, res, next) => {
         });
 });
 
+app.get('/quiz', (req, res) => {
+    let current_year = new Date().getFullYear();
+
+    pool.connect()
+        .then(client => {
+            return client
+                .query('SELECT * FROM quiz ORDER BY random() LIMIT 20;')
+                .then(async data => {
+                    let words = [];
+                    for (let i = 0; i < 20; i++) {
+                        words[i] = {
+                            right: data.rows[i]._right,
+                            wrong: data.rows[i]._wrong
+                        };
+                    }
+
+                    res.render('quiz', {
+                        title: 'Викторина',
+                        current_year: current_year,
+                        words: words
+                    });
+                });
+        });
+});
+
 app.post('/ajax/dictionary-list', (req, res) => {
     let sort_str = req.body.reversed_sort ? ' DESC' : '';
     let search_str = '%' + req.body.search + '%';

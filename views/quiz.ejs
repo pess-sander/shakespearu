@@ -1,0 +1,61 @@
+<%- include('partials/header.ejs') %>
+
+<div class="quiz-wrapper">
+    <p class="quiz-title">Викторина</p>
+    <p class="quiz-description">Проверьте, насколько хорошо Вы ориентируетесь в шекспировском лексиконе.</p>
+
+    <div class="quiz-content">
+        <div id="quiz-intro" style="display: block;">
+            <img src="imgs/quiz.jpg" alt="Шекспир думает..." class="quiz-img">
+
+            <p class="quiz-start-button" id="start">Начать</p>
+        </div>
+
+        <div id="quiz-question" style="display: none;">
+            <div class="quiz-top">
+                <div class="health-bar">
+                    <div class="health heart-full"></div>
+                    <div class="health heart-full"></div>
+                    <div class="health heart-full"></div>
+                    <div class="health heart-full"></div>
+                    <div class="health heart-full"></div>
+                </div>
+
+                <p class="quiz-q-cnter">Вопрос <span class="quiz-bold"><span id="question-num"></span>/20</span></p>
+            </div>
+
+            <p class="quiz-q-task">Какое слово придумал Шекспир?</p>
+
+            <div class="quiz-answers">
+                <p class="quiz-ans-btn" id="ans0"></p>
+                <p class="quiz-ans-btn" id="ans1"></p>
+            </div>
+            <div class="time-bar-wrapper">
+                <div class="time-bar" id="time-bar"></div>
+            </div>
+
+            <div class="quiz-q-next-wrapper" style="display: none;" id="quiz-next">
+                <p class="quiz-q-next" id="quiz-next-btn">Дальше -></p>
+            </div>
+        </div>
+
+        <div id="quiz-won" style="display: none;">
+            <p class="quiz-end-title win">Победа!</p>
+            <p class="quiz-end-desc">Вы отлично знаете шекспировский язык!</p>
+            <img src="imgs/won.png" alt="Победа" class="quiz-end-pic">
+            <p class="quiz-end-btn" id="quiz-return1">Ещё раз</p>
+        </div>
+
+        <div id="quiz-lost" style="display: none;">
+            <p class="quiz-end-title lose">Неудача!</p>
+            <p class="quiz-end-desc">Вам стоит перечитать Гамлета!</p>
+            <img src="imgs/lost.png" alt="Поражение" class="quiz-end-pic lose">
+            <p class="quiz-end-btn" id="quiz-return2">Ещё раз</p>
+        </div>
+    </div>
+</div>
+
+<script>let words = <%- JSON.stringify(words)%>;</script>
+<script src="js/quiz.js"></script>
+
+<%- include('partials/footer.ejs') %>
