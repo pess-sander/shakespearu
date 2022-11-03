@@ -1,3 +1,5 @@
+console.log(process.env.PORT);
+
 const port = process.env.PORT || 8000;
 const conString = process.env.DATABASE_URL || 'postgres://postgres:$Asuka8955meh@localhost:5432/shakespearu';
 const ssl = (process.env.PORT) ? { rejectUnauthorized: false } : false;
