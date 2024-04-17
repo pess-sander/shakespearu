@@ -20,6 +20,10 @@ CREATE DATABASE [your_db_name];
 psql -h [your_postgres_hostname] -p [your_postgres_port] -U [your_postgres_username] -d [your_db_name] -f database_dump.sql
 ```
 3. Измените текст файла db.info, написав в соответствующих строках информацию для подключение к локальной базе данных.
+4. Для установки всех необходимых зависимостей выполните команду:
+```bat
+npm install
+```
 
 ## Запуск
 Для запуска выполните команду:
