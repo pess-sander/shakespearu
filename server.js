@@ -1,56 +1,75 @@
-console.log(process.env.PORT);
-
+// Made for correct working on heroku server
 const port = process.env.PORT || 8000;
-const conString = process.env.DATABASE_URL || 'postgres://postgres:$Asuka8955meh@localhost:5432/shakespearu';
+conString = process.env.DATABASE_URL || null;
 const ssl = (process.env.PORT) ? { rejectUnauthorized: false } : false;
 
 const express = require('express');
 const path = require('path');
 const ejs = require('ejs');
 const fs = require('fs');
+// Uses Google Books Ngram API
 const ngram = require('google-ngram');
 const axios = require('axios').default;
-const { Pool } = require('pg');
+const { Pool, DatabaseError } = require('pg');
 const { Server } = require('http');
 const escape = require('pg-escape');
 const router = express.Router();
 const app = express();
 
+// Reads db connection info from file
+if (conString == null) {
+    try {
+        const data = fs.readFileSync(path.join(__dirname, '/db.info'), 'utf-8');
+        let parts = data.split('\r\n');
+        if (parts.length < 5) throw new DatabaseError('Not enough parameters in ' + path.join(__dirname, '/db.info'));
+        conString = `postgres://${parts[0]}:${parts[1]}@${parts[2]}:${parts[3]}/${parts[4]}`;
+    } catch (err) {
+        console.error('Error occured while reading from ' + 
+                    path.join(__dirname, '/db.info'));
+        console.error(err);
+        process.exit();
+    }
+}
+
+// Opens connection to db
 const pool = new Pool({
     connectionString: conString,
     ssl: ssl
 });
 
+// Renders text of a book stored in a specific file format
 async function renderPlay(book_src) {
     let f = false;
     let book_content = '';
+
+    // Processes book_src by line
+    // Addes appropriate tags into book_content to format text correctly
     while (book_src.length > 0) {
         let firstChar = book_src[0];
         let nextChar = book_src.substr(book_src.indexOf('\n')+1, 1);
 
-        //console.log(nextChar + '\n');
-
         if (!f) {
-        switch (firstChar) {
-            case '#':
-                book_content += '<p class="book-act">';
-                break;
-            case '%':
-                book_content += '<p class="book-scene">';
-                break;
-            case '~':
-                book_content += '<p class="book-description">';
-                break;
-            case '*':
-                book_content += '<p class="book-character">';
-                break;
-            case '>':
-                book_content += '<p class="book-replica">';
-                break;
-            default:
-                book_content += '<p>';
-                break;
-        }
+            // Formats the book text
+            switch (firstChar) {
+                case '#':
+                    book_content += '<p class="book-act">';
+                    break;
+                case '%':
+                    book_content += '<p class="book-scene">';
+                    break;
+                case '~':
+                    book_content += '<p class="book-description">';
+                    break;
+                case '*':
+                    book_content += '<p class="book-character">';
+                    break;
+                case '>':
+                    book_content += '<p class="book-replica">';
+                    break;
+                default:
+                    book_content += '<p>';
+                    break;
+            }
         } else {
             book_content += '<br>';
         }
@@ -71,30 +90,23 @@ async function renderPlay(book_src) {
         }
     }
 
-    function getChartData(query) {
-        
-    }
-
     let client = await pool.connect();
 
+    // Changes hrefs in links according to database info so that it leads to correct pages of dictionary
     book_content = book_content.replace(/w{([^}]*)}/g, '<a href="/dictionary/$1" class="book-word">$1</a>');
-    // let idioms = Array.from(book_content.matchAll(/i\{(.*)\}/g));
     let idioms = book_content.match(/i{([^}]*)}/g);
     if (idioms != null) {
         for (let i = 0; i < idioms.length; i++) {
-            //let sql = escape('SELECT * FROM dict WHERE LOWER(title) = LOWER(\'%s\');', [idioms[i].slice(2, -1)]);
             let sql_esc = idioms[i].slice(2, -1).replace(/\'/g, '\'\'');
             let sql = 'SELECT * FROM dict WHERE LOWER(title) = LOWER(\'' + sql_esc + '\');';
             let data =  await pool.query(sql);
-            //console.log(idioms[i][1]);
+
             let idiom_href = data.rows[0].link;
             book_content = book_content.replace(/i{([^}]*)}/, '<a href="/dictionary/' + idiom_href + '" class="book-idiom">$1</a>');
         }
     }
 
-    // console.log('\n');
     let puns = book_content.match(/p{([^}]*)}/g);
-    // console.log(puns);
     if (puns != null) {
         for (let i = 0; i < puns.length; i++) {
             let sql_esc = puns[i].slice(2, -1).replace(/\'/g, '\'\'');
@@ -114,7 +126,9 @@ app.use(express.static(path.join(__dirname, 'static')));
 app.use(express.json());
 
 app.get('/', (req, res) => {
+    // For copyright data
     let current_year = new Date().getFullYear();
+
     res.render('index', {
         title: 'Главная',
         current_year: current_year
@@ -130,14 +144,15 @@ app.get('/books', (req, res) => {
 });
 
 app.get('/books/:route', async (req, res, next) => {
-    // res.sendFile(path.join(__dirname, 'index.html'));
     let current_year = new Date().getFullYear();
+    // Observing either specific part of a book or its contents
     let view = req.query.view || 'contents';
     let book_id = req.params.route;
     let is_contents = false;
     let is_act = false;
 
     try {
+        // Reads book text from a file
         let book_src = fs.readFileSync(path.join(__dirname, 'static/books/' + book_id + '.sl'), 'utf-8');
         let page_title = book_src.slice(0, book_src.indexOf('\n'));
         book_src = book_src.substring(book_src.indexOf('\n')+1);
@@ -150,7 +165,9 @@ app.get('/books/:route', async (req, res, next) => {
         let acts_count = book_src.split('#').length - 1;
         let current_act = 0;
 
+        // If only contents needed
         if (view == 'contents') {
+            // Retrieves the contents and adds links to full text
             is_contents = true;
             let i = 1;
             while (book_src.indexOf('#') != -1) {
@@ -161,8 +178,10 @@ app.get('/books/:route', async (req, res, next) => {
                 book_src = book_src.substring(book_src.indexOf('#'));
             }
         } else if (view == 'fulltext') {
+            // Renders whole book
             book_content = await renderPlay(book_src);
         } else if (view.match(/^act\d$/).length != 0) {
+            // Retrieves needed part of a book and renders only it
             is_act = true;
             let act_num = +view.substring(3);
             if (isNaN(act_num) || act_num > acts_count || act_num < 1) next();
@@ -177,6 +196,7 @@ app.get('/books/:route', async (req, res, next) => {
 
             book_content = await renderPlay(book_src);
         } else {
+            // An error occured...
             next();
         }
 
@@ -203,6 +223,7 @@ app.get('/dictionary', (req, res) => {
 
     pool.connect()
         .then(client => {
+            // Renders whole content of dict table
             return client
                 .query('SELECT * FROM dict ORDER BY title;')
                 .then(db_res => {
@@ -247,6 +268,7 @@ app.get('/dictionary/:route', (req, res, next) => {
 
     pool.connect()
         .then(client => {
+            // Renders only appropriate dictionary article
             return client
                 .query('SELECT * FROM dict WHERE link = $1;', [req.params.route])
                 .then(async db_res => {
@@ -286,6 +308,7 @@ app.get('/quiz', (req, res) => {
 
     pool.connect()
         .then(client => {
+            // Renders quiz page
             return client
                 .query('SELECT * FROM quiz ORDER BY random() LIMIT 20;')
                 .then(async data => {
@@ -306,6 +329,7 @@ app.get('/quiz', (req, res) => {
         });
 });
 
+// Returns contents of dictionary list via AJAX according to searching options
 app.post('/ajax/dictionary-list', (req, res) => {
     let sort_str = req.body.reversed_sort ? ' DESC' : '';
     let search_str = '%' + req.body.search + '%';
@@ -352,6 +376,7 @@ app.post('/ajax/dictionary-list', (req, res) => {
         });
 });
 
+// Returns statistics on how often needed phrase/word occures in corpus of Google Books NGram
 app.post('/ajax/dictionary-chart', (req, res) => {
     let idiom = req.body.idiom;
 
@@ -364,6 +389,7 @@ app.post('/ajax/dictionary-chart', (req, res) => {
     });
 });
 
+// Returns an example of a needed phrase/word usage in corpus of Google Books Ngram
 app.post('/ajax/dictionary-book', (req, res) => {
     let idiom_req = req.body.idiom_req;
 
@@ -372,6 +398,7 @@ app.post('/ajax/dictionary-book', (req, res) => {
         let rand;
         while (true) {
             rand = Math.floor(Math.random() * books_count);
+            // It shouldn't be written by Shakespeare
             if (response.data.items[rand].volumeInfo.authors)
                 if (response.data.items[rand].volumeInfo.authors[0] != 'William Shakespeare') break;
         }
@@ -392,6 +419,7 @@ app.post('/ajax/dictionary-book', (req, res) => {
     });
 });
 
+// Error 404 page
 app.use((req, res) => {
     res.send('<h1>Error 404</h1>');
 });

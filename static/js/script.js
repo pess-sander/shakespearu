@@ -1,3 +1,4 @@
+// Retrieves dictionary list from server via AJAX
 function dictionaryListAjax(dic_controls) {
     $.ajax({
         url: '/ajax/dictionary-list',
